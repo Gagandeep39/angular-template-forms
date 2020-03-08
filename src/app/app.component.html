@@ -36,10 +36,12 @@
 
         <!-- Answer  -->
         <div class="form-group">
+          <label for="answer">Answer</label>
           <textarea name="answer" ngModel class="form-control" rows="3" required></textarea>
         </div>
 
         <!-- Gender radio Button  -->
+          <label for="answer">Gender</label>
         <div class="radio" *ngFor="let item of genders">
           <label>
             <input type="radio" name="gender" ngModel [value]="item" [(ngModel)]="radioValue"> {{item}}
