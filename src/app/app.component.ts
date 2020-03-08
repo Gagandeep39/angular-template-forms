@@ -60,5 +60,8 @@ export class AppComponent {
     this.user.secret = this.formObject.value.secret;
     this.user.gender = this.formObject.value.gender;
     console.log(this.formObject);
+
+    //Toreset the form
+    this.formObject.reset();
   }
 }
