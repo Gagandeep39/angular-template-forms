@@ -89,3 +89,44 @@
 <!-- <*ngIf="f.value.gender==''" class="text-danger"><small>Error</small> -->
 <!-- To check form objects, use below code -->
 <!-- {{f.value | json}} -->
+
+
+<!-- Check box example -->
+<!-- HTML -->
+<!-- <div class="form-check" *ngFor="let g of genders">
+    <input class="form-check-input" name="{{ g }}" type="checkbox" id="{{g}}" (change)="onChangeCategory($event, g)">
+    <label class="form-check-label" for="{{g}}">
+      {{g}}
+    </label>
+</div> -->
+
+<!-- Typescript  -->
+<!-- gender = ['male', 'female']
+onChangeCategory(event: Event, g: string) {
+  if ((<HTMLInputElement>event.target).checked) {
+    this.tempArray.push(g);
+  } else {
+    const z = this.tempArray.findIndex(x => x === g);
+    this.tempArray.splice(z, 1);
+  }
+console.log(this.tempArray);
+} -->
+
+<!-- Example 2  -->
+<!-- HTML -->
+<!--   <div class="form-check" *ngFor="let g of genders2">
+    <input class="form-check-input" name="{{ g.name }}" [(ngModel)]="g.checked" type="checkbox" id="{{g.checked}}" (change)="onChangeCategory($event, g)">
+    <label class="form-check-label" for="{{ g.name }}">
+      {{g.name}}
+    </label>
+  </div> -->
+
+<!-- TypeScript -->
+<!-- genders2 = [
+  {name: 'male', checked: false},
+  {name: 'female', checked: true},
+];
+submitForm() {
+  if(gender2.checked)
+    this.tempArray.push(gender2.name)
+} -->
