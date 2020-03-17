@@ -87,8 +87,13 @@
 <!--      </div>-->
 <!-- Validation can be done using below code, where f is ngForm  -->
 <!-- <*ngIf="f.value.gender==''" class="text-danger"><small>Error</small> -->
-<!-- To check form objects, use below code -->
+<!-- To check form values, use below code -->
 <!-- {{f.value | json}} -->
+<!-- To get more form related info use -->
+<!-- conlosle.log(this.formObject.controls) -->
+<!-- Instead of #localRef, we can use 'f.submitted && f.controls.name.invalid' for validation -->
+<!-- f.submitted is mandatory, else an error of invalid property not found will appear -->
+<!-- f is the localRef i.e #f="ngForm" -->
 
 
 <!-- Check box example -->
