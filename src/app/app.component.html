@@ -80,6 +80,12 @@
 <!-- ngModel is required for local reference to work -->
 <!-- #abc = "ngForm" - makes elemnt a part of form object and creates a local ref, using this validation in html can be shown -->
 <!-- Specify button type, else it will be conidered as 'submit' by deefault, will lead to issues while adding dummy data -->
-
-
-          
+<!-- IMP: #loaclRef wont work if created insisde *ngFor-->
+<!-- Alwys use below logic for radio and checkbox-->
+<!--      <div *ngFor="let x of list">-->
+<!--        <input name="gender" [value]="x">-->
+<!--      </div>-->
+<!-- Validation can be done using below code, where f is ngForm  -->
+<!-- <*ngIf="f.value.gender==''" class="text-danger"><small>Error</small> -->
+<!-- To check form objects, use below code -->
+<!-- {{f.value | json}} -->
