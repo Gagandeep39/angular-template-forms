@@ -4,6 +4,8 @@
       <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div id="user-data" ngModelGroup="userData">
           <!-- Username  -->
+          <!-- ngModel makes the elemnt a part of form object  -->
+          <!-- If required is specified and field is empty, When the form is submitted, value of 'valid' will be false  -->
           <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" class="form-control" ngModel name="username" required>
@@ -69,3 +71,12 @@
     </div>
   </div>
 </div>
+
+
+<!-- Notes  -->
+<!-- ngModel - makes elemnt a part of form object -->
+<!-- name attribut is needed for ngModel to work -->
+<!-- #abc - Creates a local reference for the elemnt -->
+<!-- #abc = "ngForm" - makes elemnt a part of form object and creates a local ref, using this validation in html can be shown -->
+
+          
